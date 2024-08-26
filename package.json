@@ -1,0 +1,23 @@
+{
+  "name": "advice-generator-app",
+  "version": "1.0.0",
+  "description": "Frontend Mentors Challenge",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simplify4Me2/advice-generator-app.git"
+  },
+  "author": "Simon Vereecke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Simplify4Me2/advice-generator-app/issues"
+  },
+  "homepage": "https://github.com/Simplify4Me2/advice-generator-app#readme",
+  "devDependencies": {
+    "vite": "^5.4.2"
+  }
+}
