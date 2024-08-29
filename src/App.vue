@@ -16,51 +16,44 @@ import TheWelcome from './components/TheWelcome.vue'
     <TheWelcome />
   </main> -->
 
-    Advice #<!-- Advice ID goes here -->
+  Advice #<!-- Advice ID goes here -->
 
-    "<!-- Advice text goes here -->"
-  
+  "<!-- Advice text goes here -->"
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded
+    by <a href="#">Your Name Here</a>.
   </div>
 </template>
 
-<style scoped>
+<style lang="sass" scoped>
 
-.attribution { 
-  font-size: 11px; 
-  text-align: center; 
-}
+.attribution
+  font-size: 11px
+  text-align: center
 
-.attribution a { 
-  color: hsl(228, 45%, 44%); 
-}
+.attribution a
+  color: hsl(228, 45%, 44%)
 
-header {
-  line-height: 1.5;
-}
+header
+  line-height: 1.5
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+.logo
+  display: block
+  margin: 0 auto 2rem
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+@media (min-width: 1024px)
+  header
+    display: flex
+    place-items: center
+    padding-right: calc(var(--section-gap) / 2)
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+  .logo
+    margin: 0 2rem 0 0
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
+  header .wrapper
+    display: flex
+    place-items: flex-start
+    flex-wrap: wrap
 </style>
