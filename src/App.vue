@@ -5,7 +5,7 @@ import TheWelcome from './components/TheWelcome.vue'
 
 <template>
   <main class="container">
-    <p class="id">Advice #117<!-- Advice ID goes here --></p>
+    <p class="id">ADVICE #{{ `117` }}</p>
 
     <div class="advice">
       "It's easy to sit up and take notice, what's difficult is getting up and taking action."
@@ -43,6 +43,10 @@ header
 .id
   color: $secondary-color
   text-align: center
+  padding: 2.5rem
+  letter-spacing: 3.7px
+  font-weight: 600
+  font-size: 11px
 
 .logo
   display: block
