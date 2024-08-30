@@ -4,6 +4,11 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
+  <main class="container">
+    <p>Advice #117<!-- Advice ID goes here --></p>
+
+    "It's easy to sit up and tke notice, what's difficult is getting u^p and taking action."
+  </main>
   <!-- <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
@@ -15,29 +20,16 @@ import TheWelcome from './components/TheWelcome.vue'
   <main>
     <TheWelcome />
   </main> -->
-
-  Advice #<!-- Advice ID goes here -->
-
-  "<!-- Advice text goes here -->"
-
-  <div class="attribution">
-    Challenge by
-    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded
-    by <a href="#">Your Name Here</a>.
-  </div>
 </template>
 
 <style lang="sass" scoped>
-
-.attribution
-  font-size: 11px
-  text-align: center
-
-.attribution a
-  color: hsl(228, 45%, 44%)
+@import './assets/sass/_variables.sass'
 
 header
   line-height: 1.5
+
+.container
+  background-color: $card-background-color
 
 .logo
   display: block
