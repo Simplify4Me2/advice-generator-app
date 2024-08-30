@@ -5,9 +5,12 @@ import TheWelcome from './components/TheWelcome.vue'
 
 <template>
   <main class="container">
-    <p>Advice #117<!-- Advice ID goes here --></p>
+    <p class="id">Advice #117<!-- Advice ID goes here --></p>
 
-    "It's easy to sit up and tke notice, what's difficult is getting u^p and taking action."
+    <div class="advice">
+      "It's easy to sit up and take notice, what's difficult is getting up and taking action."
+    </div>
+    <img src="/images/pattern-divider-mobile.svg" />
   </main>
   <!-- <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
@@ -28,8 +31,18 @@ import TheWelcome from './components/TheWelcome.vue'
 header
   line-height: 1.5
 
+.advice
+  color: $primary-color
+
 .container
   background-color: $card-background-color
+  margin-top: 6.5rem
+  border-radius: 10px
+  height: 19.6rem
+
+.id
+  color: $secondary-color
+  text-align: center
 
 .logo
   display: block
