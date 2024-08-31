@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+
+function roll(event: MouseEvent) {
+  console.log('Roll the dice... : ', event)
+}
 </script>
 
 <template>
@@ -12,7 +16,7 @@ import TheWelcome from './components/TheWelcome.vue'
       action.&#8221;
     </div>
     <img src="/images/pattern-divider-mobile.svg" />
-    <button>
+    <button @click="roll">
       <img src="/images/icon-dice.svg" />
     </button>
   </main>
