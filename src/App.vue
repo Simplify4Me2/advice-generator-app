@@ -32,8 +32,13 @@ import TheWelcome from './components/TheWelcome.vue'
 @import './assets/sass/_variables.sass'
 
 button
-  display: block
+  display: inline-block
   background-color: $secondary-color
+  padding: 1.25rem
+  margin-top: 2rem
+  line-height: 0
+  border: none
+  border-radius: 100%
 
 header
   line-height: 1.5
