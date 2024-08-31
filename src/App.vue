@@ -72,6 +72,11 @@ header
   margin-top: 6.5rem
   border-radius: 10px
   height: 19.6rem
+  max-width: 37.4rem
+
+  @media (min-width: 1024px)
+    margin-top: 15.5rem
+    height: 23rem
 
 .id
   color: $secondary-color
