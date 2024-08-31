@@ -8,9 +8,12 @@ import TheWelcome from './components/TheWelcome.vue'
     <p class="id">ADVICE #{{ `117` }}</p>
 
     <div class="advice">
-      "It's easy to sit up and take notice, what's difficult is getting up and taking action."
+      "It is easy to sit up and take notice, what's difficult is getting up and taking action."
     </div>
     <img src="/images/pattern-divider-mobile.svg" />
+    <button>
+      <img src="/images/icon-dice.svg" />
+    </button>
   </main>
   <!-- <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
@@ -28,13 +31,33 @@ import TheWelcome from './components/TheWelcome.vue'
 <style lang="sass" scoped>
 @import './assets/sass/_variables.sass'
 
+button
+  display: block
+  background-color: $secondary-color
+
 header
   line-height: 1.5
 
 .advice
   color: $primary-color
+  font-size: 23px
+  text-align: center
+  line-height: 2.05rem
+  margin: 0rem 1.7rem
+  letter-spacing: 0px
+  margin-bottom: 1.5rem
+
+  // &::before
+  //   content: '\275D'
+  //   margin-right: 0px
+
+  @media (min-width: 1024px)
+    font-size: $font-size
 
 .container
+  display: flex
+  flex-direction: column
+  align-items: center
   background-color: $card-background-color
   margin-top: 6.5rem
   border-radius: 10px
@@ -43,7 +66,7 @@ header
 .id
   color: $secondary-color
   text-align: center
-  padding: 2.5rem
+  padding: 2.5rem 2.5rem 1.4rem 2.5rem
   letter-spacing: 3.7px
   font-weight: 600
   font-size: 11px
