@@ -8,7 +8,8 @@ import TheWelcome from './components/TheWelcome.vue'
     <p class="id">ADVICE #{{ `117` }}</p>
 
     <div class="advice">
-      "It is easy to sit up and take notice, what's difficult is getting up and taking action."
+      &#8220;It is easy to sit up and take notice, what's difficult is getting up and taking
+      action.&#8221;
     </div>
     <img src="/images/pattern-divider-mobile.svg" />
     <button>
