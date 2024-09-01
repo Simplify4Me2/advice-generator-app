@@ -16,7 +16,8 @@ function roll(event: MouseEvent) {
         &#8220;It is easy to sit up and take notice, what's difficult is getting up and taking
         action.&#8221;
       </div>
-      <img src="/images/pattern-divider-mobile.svg" />
+      <img class="pattern-divider-mobile" src="/images/pattern-divider-mobile.svg" />
+      <img class="pattern-divider-desktop" src="/images/pattern-divider-desktop.svg" />
     </div>
     <button @click="roll">
       <img src="/images/icon-dice.svg" />
@@ -75,11 +76,12 @@ header
   margin-top: 6.5rem
   border-radius: 10px
   height: 19.6rem
-  max-width: 37.4rem
+  max-width: 33.75rem
 
   @media (min-width: 1024px)
-    margin-top: 15.5rem
-    height: 23rem
+    margin-top: 13.75em
+    height: 20.75rem
+    border-radius: 20px
 
 .id
   color: $secondary-color
@@ -88,4 +90,18 @@ header
   letter-spacing: 3.7px
   font-weight: 600
   font-size: 11px
+
+  @media (min-width: 1024px)
+    font-size: 14px
+    padding-top: 3rem
+
+.pattern-divider-mobile
+  @media (min-width: 640px)
+    display: none
+
+.pattern-divider-desktop
+  display: none
+
+  @media (min-width: 640px)
+    display: block
 </style>
