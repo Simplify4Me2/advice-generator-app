@@ -67,6 +67,9 @@ header
 
   @media (min-width: 1024px)
     font-size: $font-size
+    line-height: 1.35
+    margin: 0rem 2rem
+    margin-bottom: 2.4rem
 
 .container
   display: flex
