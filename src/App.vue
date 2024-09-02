@@ -57,6 +57,9 @@ button
     cursor: pointer
     box-shadow: 0px 0px 25px $secondary-color
 
+button:active
+  box-shadow: inset 0px 0px 15px $card-background-color
+
 header
   line-height: 1.5
 
