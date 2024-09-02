@@ -53,6 +53,10 @@ button
   border: none
   border-radius: 100%
 
+  &:hover
+    cursor: pointer
+    box-shadow: 0px 0px 25px $secondary-color
+
 header
   line-height: 1.5
 
