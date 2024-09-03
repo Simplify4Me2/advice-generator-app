@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import DiceButton from './components/DiceButton.vue'
 import { useFetch } from './hooks/useFetch'
 
 interface Response {
@@ -14,7 +15,7 @@ interface Slip {
 
 const { data, error, reload } = useFetch<Response>('https://api.adviceslip.com/advice')
 
-function roll(event: MouseEvent) {
+function roll() {
   reload()
 }
 </script>
@@ -27,9 +28,7 @@ function roll(event: MouseEvent) {
       <img class="pattern-divider-mobile" src="/images/pattern-divider-mobile.svg" />
       <img class="pattern-divider-desktop" src="/images/pattern-divider-desktop.svg" />
     </div>
-    <button @click="roll">
-      <img src="/images/icon-dice.svg" />
-    </button>
+    <DiceButton @click="roll" />
   </main>
   <!-- <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
@@ -37,11 +36,7 @@ function roll(event: MouseEvent) {
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main> -->
+  </header>-->
 </template>
 
 <style lang="sass" scoped>
@@ -51,22 +46,6 @@ main
   display: flex
   flex-direction: column
   align-items: center
-
-button
-  display: inline-block
-  background-color: $secondary-color
-  padding: 1.25rem
-  margin-top: -2rem
-  line-height: 0
-  border: none
-  border-radius: 100%
-
-  &:hover
-    cursor: pointer
-    box-shadow: 0px 0px 25px $secondary-color
-
-button:active
-  box-shadow: inset 0px 0px 15px $card-background-color
 
 header
   line-height: 1.5
