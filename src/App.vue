@@ -14,10 +14,11 @@ interface Slip {
 
 // const { data, error } = useFetch<Slip>('https://api.adviceslip.com/advice')
 // const foo = useFetch<Response>('https://api.adviceslip.com/advice')
-const { data, error } = useFetch<Response>('https://api.adviceslip.com/advice')
+const { data, error, reload } = useFetch<Response>('https://api.adviceslip.com/advice')
 
 function roll(event: MouseEvent) {
-  console.log('Roll the dice... : ', event)
+  // console.log('Roll the dice... : ', event)
+  reload()
 }
 </script>
 
