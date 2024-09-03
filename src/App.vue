@@ -1,6 +1,20 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import { useFetch } from './hooks/useFetch'
+
+interface Response {
+  slip: Slip
+}
+
+interface Slip {
+  id: number
+  advice: string
+}
+
+// const { data, error } = useFetch<Slip>('https://api.adviceslip.com/advice')
+// const foo = useFetch<Response>('https://api.adviceslip.com/advice')
+const { data, error } = useFetch<Response>('https://api.adviceslip.com/advice')
 
 function roll(event: MouseEvent) {
   console.log('Roll the dice... : ', event)
@@ -10,12 +24,14 @@ function roll(event: MouseEvent) {
 <template>
   <main>
     <div class="container">
-      <p class="id">ADVICE #{{ `117` }}</p>
-
-      <div class="advice">
+      <!-- <p class="id">ADVICE #{{ '117' }}</p> -->
+      <p class="id">ADVICE #{{ data && data.slip.id }}</p>
+      <!-- <p class="id">{{ JSON.stringify(data) }}</p> -->
+      <!-- <div class="advice">
         &#8220;It is easy to sit up and take notice, what's difficult is getting up and taking
         action.&#8221;
-      </div>
+      </div> -->
+      <div class="advice">&#8220;{{ data && data.slip.advice }}&#8221;</div>
       <img class="pattern-divider-mobile" src="/images/pattern-divider-mobile.svg" />
       <img class="pattern-divider-desktop" src="/images/pattern-divider-desktop.svg" />
     </div>
