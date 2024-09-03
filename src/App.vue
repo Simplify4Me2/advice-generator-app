@@ -12,9 +12,7 @@ interface Slip {
   advice: string
 }
 
-// const { data, error } = useFetch<Slip>('https://api.adviceslip.com/advice')
-// const foo = useFetch<Response>('https://api.adviceslip.com/advice')
-const { data, error, reload } = useFetch<Response>('https://api.adviceslip.com/advice')
+const { data, error, reload } = useFetch<Response>('https://api.adviceslip.com/advice/12')
 
 function roll(event: MouseEvent) {
   // console.log('Roll the dice... : ', event)
@@ -26,6 +24,7 @@ function roll(event: MouseEvent) {
   <main>
     <div class="container">
       <!-- <p class="id">ADVICE #{{ '117' }}</p> -->
+       <!-- 12 / 38 -->
       <p class="id">ADVICE #{{ data && data.slip.id }}</p>
       <!-- <p class="id">{{ JSON.stringify(data) }}</p> -->
       <!-- <div class="advice">
@@ -104,6 +103,9 @@ header
   border-radius: 10px
   height: 19.6rem
   max-width: 33.75rem
+
+  @media (min-width: 640px)
+    width: 33.75rem
 
   @media (min-width: 1024px)
     margin-top: 13.75em
