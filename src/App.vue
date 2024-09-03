@@ -12,7 +12,7 @@ interface Slip {
   advice: string
 }
 
-const { data, error, reload } = useFetch<Response>('https://api.adviceslip.com/advice/38')
+const { data, error, reload } = useFetch<Response>('https://api.adviceslip.com/advice')
 
 function roll(event: MouseEvent) {
   reload()
