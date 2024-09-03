@@ -12,10 +12,9 @@ interface Slip {
   advice: string
 }
 
-const { data, error, reload } = useFetch<Response>('https://api.adviceslip.com/advice/12')
+const { data, error, reload } = useFetch<Response>('https://api.adviceslip.com/advice/38')
 
 function roll(event: MouseEvent) {
-  // console.log('Roll the dice... : ', event)
   reload()
 }
 </script>
@@ -23,14 +22,7 @@ function roll(event: MouseEvent) {
 <template>
   <main>
     <div class="container">
-      <!-- <p class="id">ADVICE #{{ '117' }}</p> -->
-       <!-- 12 / 38 -->
       <p class="id">ADVICE #{{ data && data.slip.id }}</p>
-      <!-- <p class="id">{{ JSON.stringify(data) }}</p> -->
-      <!-- <div class="advice">
-        &#8220;It is easy to sit up and take notice, what's difficult is getting up and taking
-        action.&#8221;
-      </div> -->
       <div class="advice">&#8220;{{ data && data.slip.advice }}&#8221;</div>
       <img class="pattern-divider-mobile" src="/images/pattern-divider-mobile.svg" />
       <img class="pattern-divider-desktop" src="/images/pattern-divider-desktop.svg" />
@@ -86,13 +78,11 @@ header
   line-height: 2.05rem
   margin: 0rem 1.7rem
   letter-spacing: 0px
-  margin-bottom: 1.5rem
 
   @media (min-width: 1024px)
     font-size: $font-size
     line-height: 1.35
     margin: 0rem 2rem
-    margin-bottom: 2.4rem
 
 .container
   display: flex
@@ -101,15 +91,13 @@ header
   background-color: $card-background-color
   margin-top: 6.5rem
   border-radius: 10px
-  height: 19.6rem
-  max-width: 33.75rem
+  width: 21.5rem
 
   @media (min-width: 640px)
     width: 33.75rem
 
   @media (min-width: 1024px)
     margin-top: 13.75em
-    height: 20.75rem
     border-radius: 20px
 
 .id
@@ -125,10 +113,15 @@ header
     padding-top: 3rem
 
 .pattern-divider-mobile
+  margin-top: 1.5rem
+  margin-bottom: 3.95rem
+
   @media (min-width: 640px)
     display: none
 
 .pattern-divider-desktop
+  margin-top: 2.4rem
+  margin-bottom: 4.5rem
   display: none
 
   @media (min-width: 640px)
