@@ -1,19 +1,11 @@
 <script setup lang="ts">
+import type { ApiResponse } from './api.model'
 import Advice from './components/Advice.vue'
 import DiceButton from './components/DiceButton.vue'
 import PatternDivider from './components/PatternDivider.vue'
 import { useFetch } from './hooks/useFetch'
 
-interface Response {
-  slip: Slip
-}
-
-interface Slip {
-  id: number
-  advice: string
-}
-
-const { data, reload } = useFetch<Response>('https://api.adviceslip.com/advice')
+const { data, reload } = useFetch<ApiResponse>('https://api.adviceslip.com/advice')
 </script>
 
 <template>

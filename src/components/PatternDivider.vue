@@ -1,6 +1,14 @@
 <template>
-  <img class="pattern-divider-mobile" src="/images/pattern-divider-mobile.svg" />
-  <img class="pattern-divider-desktop" src="/images/pattern-divider-desktop.svg" />
+  <img
+    class="pattern-divider-mobile"
+    src="/images/pattern-divider-mobile.svg"
+    alt="pattern divider"
+  />
+  <img
+    class="pattern-divider-desktop"
+    src="/images/pattern-divider-desktop.svg"
+    alt="pattern divider"
+  />
 </template>
 
 <style lang="sass" scoped>

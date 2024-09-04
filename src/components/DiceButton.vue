@@ -1,6 +1,6 @@
 <template>
   <button @click="$emit('click')">
-    <img src="/images/icon-dice.svg" />
+    <img src="/images/icon-dice.svg" alt="dice" />
   </button>
 </template>
 

@@ -6,8 +6,8 @@ defineProps<{
 </script>
 
 <template>
-  <p class="id">ADVICE #{{ id }}</p>
-  <div class="advice">&#8220;{{ message }}&#8221;</div>
+  <h1 class="id">ADVICE #{{ id }}</h1>
+  <p class="advice">&#8220;{{ message }}&#8221;</p>
 </template>
 
 <style lang="sass" scoped>
