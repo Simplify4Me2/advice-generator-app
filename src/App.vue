@@ -33,10 +33,11 @@ main
   background-color: $card-background-color
   margin-top: 6.5rem
   border-radius: 10px
-  width: 21.5rem
+  max-width: 21.5rem
 
   @media (min-width: 640px)
     width: 33.75rem
+    max-width: 33.75rem
 
   @media (min-width: 1024px)
     margin-top: 13.75em
