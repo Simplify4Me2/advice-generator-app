@@ -2,6 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import DiceButton from './components/DiceButton.vue'
+import PatternDivider from './components/PatternDivider.vue'
 import { useFetch } from './hooks/useFetch'
 
 interface Response {
@@ -25,8 +26,7 @@ function roll() {
     <div class="container">
       <p class="id">ADVICE #{{ data && data.slip.id }}</p>
       <div class="advice">&#8220;{{ data && data.slip.advice }}&#8221;</div>
-      <img class="pattern-divider-mobile" src="/images/pattern-divider-mobile.svg" />
-      <img class="pattern-divider-desktop" src="/images/pattern-divider-desktop.svg" />
+      <PatternDivider />
     </div>
     <DiceButton @click="roll" />
   </main>
@@ -90,19 +90,4 @@ header
   @media (min-width: 1024px)
     font-size: 14px
     padding-top: 3rem
-
-.pattern-divider-mobile
-  margin-top: 1.5rem
-  margin-bottom: 3.95rem
-
-  @media (min-width: 640px)
-    display: none
-
-.pattern-divider-desktop
-  margin-top: 2.4rem
-  margin-bottom: 4.5rem
-  display: none
-
-  @media (min-width: 640px)
-    display: block
 </style>
