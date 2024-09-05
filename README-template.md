@@ -49,29 +49,56 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This was my first experience using **Vue JS** to build an app. I learned how to work with _templates_, _scoped styling_, pass props to _components_, and emit events. Fetching data from the API felt quite similar to using a hook in React, though the terminology is different—it's called a composable in Vue, not a hook.
 
-To see how you can add code snippets, see below:
+This is how I handle the click event in a custom component:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<button @click="$emit('click')">
+  <img src="/images/icon-dice.svg" alt="dice" />
+</button>
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+Using separate files for variables and setting font:
+
+```scss
+@import './_base.sass' @import './_variables.sass';
 ```
+
+I've added a reload trigger by updating a ref value. Since the watchEffect will pick up the value change, it will call the same url again:
 
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+import { ref, toValue, watchEffect } from 'vue'
+
+export function useFetch<T>(url: string) {
+  const data = ref<T | null>(null)
+  const error = ref(null)
+  const reloadTrigger = ref(0)
+
+  function fetchData() {
+    data.value = null
+    error.value = null
+
+    fetch(toValue(url))
+      .then((res) => res.json())
+      .then((json) => {
+        data.value = json
+      })
+      .catch((err) => (error.value = err))
+  }
+
+  watchEffect(() => {
+    if (reloadTrigger.value >= 0) fetchData()
+  })
+
+  function reload() {
+    reloadTrigger.value++
+  }
+
+  return { data, error, reload }
 }
+
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
